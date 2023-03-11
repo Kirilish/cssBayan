@@ -1,0 +1,132 @@
+* {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+}
+
+body {
+  background-color: #000000;
+  color: #c5c6c7;
+}
+
+.title {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  font-weight: 700;
+  color: #66fcf1;
+  transition: 0.5s ease-in-out;
+}
+
+.accordion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 37.5rem;
+  color: #c5c6c7;
+  transition: 0.5s ease-in-out;
+}
+
+.accordion-block {
+  width: 37.5rem;
+  margin: 0.3rem;
+}
+
+.accordion-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.6rem;
+  font-weight: bold;
+  background-color: #1f2833;
+  box-shadow: 0rem 0.3rem 0rem 0rem #000 inset;
+}
+
+.accordion:hover {
+  color: #d7d7d7;
+  transition: 0.5s ease-in-out;
+}
+
+.accordion-checkbox:checked + .accordion-label:not(:focus) {
+  color: #45a29e;
+  transition: 0.5s ease-in-out;
+}
+
+.accordion-label {
+  cursor: pointer;
+}
+
+.accordion-image {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.accordion-checkbox {
+  display: none;
+}
+
+.accordion-checkbox:checked + .accordion-label {
+  background-color: #eee;
+}
+
+/* Accordion icon */
+
+.accordion-arrow {
+  display: inline-block;
+  width: 1.25rem;
+  height: 1.25rem;
+  background-image: url("./../img/plus.svg");
+  opacity: 0;
+  background-repeat: no-repeat;
+  transition: opacity 0.3s ease;
+  transition: transform 0.3s ease-out, border-color 0.3s ease-out;
+}
+
+/* Accordion icon chek */
+
+.accordion-checkbox:checked ~ .accordion-label .accordion-arrow {
+  background-image: url("./../img/plus.svg");
+  transform: rotate(45deg);
+  transition: transform 0.3s ease-out, border-color 0.3s ease-out;
+}
+
+/* Accordion icon hover */
+
+.accordion-block .accordion-label:hover .accordion-arrow {
+  background-image: url("./../img/plus.svg");
+  transform: rotate(45deg);
+  transition: transform 0.3s ease-out, border-color 0.3s ease-out;
+}
+
+/* Accordion icon appears */
+
+.accordion:hover .accordion-arrow {
+  opacity: 1;
+}
+
+/* content img none */
+
+.accordion-block .accordion-label .accordion-image {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+/* content img block */
+
+.accordion-block
+  .accordion-checkbox:checked
+  + .accordion-label
+  .accordion-image {
+  max-height: 62.5rem;
+  transition: max-height 0.5s ease;
+}
+
+/* content img hover */
+
+.accordion-block .accordion-label:hover .accordion-image {
+  max-height: 62.5rem;
+  transition: max-height 0.9s ease;
+}
+

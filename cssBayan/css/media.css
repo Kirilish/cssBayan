@@ -1,0 +1,15 @@
+@media (max-width: 769px) {
+  .accordion-block {
+    width: 30rem;
+  }
+}
+
+@media (max-width: 426px) {
+  .accordion-block {
+    width: 15rem;
+  }
+
+  .accordion-text {
+    max-width: 180px;
+  }
+}

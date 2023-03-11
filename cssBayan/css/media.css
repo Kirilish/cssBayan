@@ -2,6 +2,10 @@
   .accordion-block {
     width: 30rem;
   }
+
+  .title{
+    font-size: 1.5rem;
+  }
 }
 
 @media (max-width: 426px) {
@@ -11,5 +15,8 @@
 
   .accordion-text {
     max-width: 180px;
+  }
+  .title{
+    font-size: 1rem;
   }
 }

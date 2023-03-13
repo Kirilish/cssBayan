@@ -1,0 +1,29 @@
+@media (max-width: 769px) {
+  .accordion-block {
+    width: 30rem;
+  }
+
+  .title {
+    font-size: 1.7rem;
+  }
+}
+
+@media (max-width: 426px) {
+  .accordion-block {
+    width: 23rem;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 376px) {
+  .accordion-block {
+    width: 15rem;
+  }
+
+  .title {
+    font-size: 1rem;
+  }
+}
